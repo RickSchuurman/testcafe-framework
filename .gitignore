@@ -1,4 +1,8 @@
 # Dependency directories
 node_modules/
 
+# Reports
+system-test/reports
+screenshots
+
 .idea

@@ -1,5 +1,23 @@
 {
+  "name": "testcafe-mean-example-app",
+  "version": "1.0.0",
+  "description": "testcafe mean example app",
+  "scripts": {
+    "test:all": "./node_modules/.bin/testcafe all system-test/tests/",
+    "test:ci": "./node_modules/.bin/testcafe chrome:headless system-test/tests/ --concurrency 8",
+    "test:speed": "./node_modules/.bin/testcafe chrome system-test/tests/ --speed 0.5",
+    "test:emulate": "./node_modules/.bin/testcafe 'chrome:emulation:device=iphone 6/7/8' system-test/tests/login.test.js",
+    "test:remote": "./node_modules/.bin/testcafe remote system-test/tests/login.test.js --qr-code",
+    "test:parallel": "./node_modules/.bin/testcafe chrome system-test/tests/ --concurrency 8",
+    "test:headless": "./node_modules/.bin/testcafe chrome:headless system-test/tests/",
+    "test:debug": "./node_modules/.bin/testcafe chrome system-test/tests/ --debug-on-fail",
+    "test:screenshots": "./node_modules/.bin/testcafe chrome system-test/tests/ --screenshots-on-fails -s screenshots",
+    "test-api-runner": "node system-test/testcafe-api-run.js"
+  },
+  "author": "Rick Schuurman",
+  "license": "MIT",
   "devDependencies": {
-    "testcafe": "^1.1.4"
+    "testcafe": "^1.2.1",
+    "testcafe-reporter-html": "^1.4.4"
   }
 }
