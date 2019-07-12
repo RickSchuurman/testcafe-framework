@@ -3,7 +3,7 @@ import LoginModel from "../page-model/model/login.model";
 
 
 fixture`Test login page`
-    .page`http://tactrl.nl/`
+    .page`ec2-34-255-161-140.eu-west-1.compute.amazonaws.com`
     .beforeEach(async t => {
         await t.click(headerComponent.login);
     });

@@ -1,7 +1,7 @@
 const testCafe = require('testcafe');
 const fs = require('fs');
 
-const stream = fs.createWriteStream('report.html');
+const stream = fs.createWriteStream('reports/report.html');
 
 function runTest(tcOptions) {
     testCafe('localhost', 8080, 8081)
@@ -10,7 +10,7 @@ function runTest(tcOptions) {
             return runner
                 .src(['tests/**/*.test.js'])
                 .browsers(['chrome','firefox'])
-                .concurrency(4)
+                .concurrency(2)
                 .reporter('html', stream)
                 .screenshots('reports/screenshots', true)
                 .run(tcOptions)
