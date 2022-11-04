@@ -18,6 +18,6 @@
   "license": "MIT",
   "devDependencies": {
     "testcafe": "^1.3.2",
-    "testcafe-reporter-html": "^1.4.4"
+    "testcafe-reporter-html": "^1.4.6"
   }
 }
